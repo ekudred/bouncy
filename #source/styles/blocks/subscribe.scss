@@ -1,0 +1,130 @@
+// ========== SUBSCRIBE ==========
+
+.subscribe {
+    width: 100%;
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 2;
+
+    color: #ffffff;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 1920px;
+        height: 450px;
+
+        overflow: hidden;
+
+        background-image: url('../images/img22.png');
+        background-repeat: no-repeat;
+        background-size: 1920px auto;
+        background-position: center;
+
+        margin: 0 auto;
+
+        box-shadow: 0 0 5px #333333;
+
+        padding: 1rem;
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            &--top {
+                font-size: 1.2rem;
+                font-weight: lighter;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            &--bottom {
+                color: #81868e;
+                margin-top: 1.5rem;
+
+                max-width: 450px;
+            }
+        }
+
+        &__submit-wrapper {
+            max-width: 530px;
+
+            margin-top: 3rem;
+
+            &_form {
+                display: flex;
+                width: 100%;
+    
+                color: #ffffff;
+
+                @media (max-width: 600px) {
+                    flex-direction: column;
+                }
+    
+                & input {
+                    width: 300px;
+
+                    @media (max-width: 600px) {
+                        max-width: 100%;
+                    }
+
+                    font-family: "MyriadPro-Light", sans-serif;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    color: #cfd3d4;
+    
+                    &::placeholder {
+                        color: #cfd3d4;
+                    }
+                }
+    
+                &--email {
+                    border: 1px solid #cfd3d4;
+                    padding: .6rem 1.3rem;
+                    background: transparent;
+    
+                }
+    
+                &--button {
+                    color: #ffffff;
+                    font-family: "MyriadPro-Light", sans-serif;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    line-height: 1;
+
+                    background-color: #19bd9a;
+                    padding: .6rem 3rem;
+
+                    border: 2px solid #19bd9a;
+    
+                    margin-left: 1rem;
+    
+                    transition: all .2s ease;
+
+                    @media (max-width: 600px) {
+                        margin-left: 0;
+
+                        margin-top: 1rem;
+                    }
+    
+                    &:hover {
+                        background-color: transparent;
+                        border-color: #ffffff;
+                    }
+    
+                    &:active {
+                        background-color: rgba(#ffffff, .05);
+                        border-color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

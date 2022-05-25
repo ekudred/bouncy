@@ -1,0 +1,131 @@
+// ========== FOOTER ==========
+
+.footer {
+    background-color: #f3f3f3;
+    width: 100%;
+
+    position: relative;
+    z-index: 1;
+
+    &-container {
+        margin: 0 auto;
+        max-width: 1920px;
+
+        padding: 4rem 1rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+            text-align: center;
+            line-height: 1;
+
+            &--logo {
+                font-size: 1.6rem;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                font-family: "BigJohn", sans-serif;
+
+                color: #333333;
+            }
+
+            &--rights {
+                color: #81868e;
+                font-size: .9rem;
+                font-family: "MyriadPro-Light", sans-serif;
+                font-weight: bold;
+                letter-spacing: 1px;
+
+                margin-top: 1rem;
+            }
+        }
+
+        &__socials {
+            display: flex;
+
+            margin-top: 2rem;
+
+            &--item {
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background-color .2s ease;
+
+                width: 30px;
+                height: 30px;
+
+                margin-right: .5rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                & svg {
+                    width: 15px;
+                    fill: #ffffff;
+                }
+
+                &.instagram {
+                    background-color: #3f729b;
+
+                    &:hover {
+                        background-color: darken(#3f729b, 4);
+                    }
+
+                    &:active {
+                        background-color: darken(#3f729b, 12);
+                    }
+
+                    & svg {
+                        width: 21px;
+                    }
+                }
+
+                &.facebook {
+                    background-color: #3b5998;
+
+                    &:hover {
+                        background-color: darken(#3b5998, 4);
+                    }
+
+                    &:active {
+                        background-color: darken(#3b5998, 12);
+                    }
+                }
+
+                &.twitter {
+                    background-color: #26a6d1;
+
+                    &:hover {
+                        background-color: darken(#26a6d1, 4);
+                    }
+
+                    &:active {
+                        background-color: darken(#26a6d1, 12);
+                    }
+                }
+
+                &.vk {
+                    background-color: #2787f5;
+
+                    &:hover {
+                        background-color: darken(#2787f5, 4);
+                    }
+
+                    &:active {
+                        background-color: darken(#2787f5, 12);
+                    }
+
+                    & svg {
+                        height: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

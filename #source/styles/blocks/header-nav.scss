@@ -1,0 +1,205 @@
+// ========== HEADER-NAV ==========
+
+.header-nav {
+    width: 100%;
+    height: 4.3rem;
+    color: #ffffff;
+
+    position: fixed;
+    z-index: 1000;
+
+    transition: 
+        height .5s ease,
+        background-color .2s ease;
+
+    &.active {
+        height: 100%;
+    }
+
+    &.background-color {
+        background-color: rgba(#333333, .5);
+
+        & .header-nav-container {
+            height: 4.3rem;
+
+            &__navigations {
+                @media (max-width: 800px) {
+                    top: 4.3rem;
+                }
+            }
+        }
+    }
+    
+    &-container {
+        margin: 0 auto;
+        padding: 0 6rem;
+        max-width: 1920px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 7.2rem;
+        overflow-y: auto;
+
+        transition: all .5s ease;
+
+        &.active {
+            background-color: rgba(#333333, .7);
+        }
+
+        @media (max-width: 1024px) {
+            padding: 0 2.3rem;
+        }
+
+        &__logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            font-family: "BigJohn", sans-serif;
+        }
+
+        &__navigations {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 800px) {
+                display: none;
+                flex-direction: column;
+
+                position: absolute;
+                left: 0;
+                top: 7.2rem;
+
+                transition: all .3s ease;
+                transform: scaleY(0);
+                transform-origin: 0 0;
+
+                background-color: rgba(#333333, .7);
+                overflow-y: auto;
+                
+                width: 100%;
+                height: 100%;
+            }
+
+            &.open {
+                display: flex;
+            }
+
+            &.active {
+                transform: scaleY(1);
+            }
+
+            &--item {
+                display: flex;
+                align-items: center;
+
+                padding: .3rem 1rem;
+                margin-right: .2rem;
+
+                font-family: "MyriadPro-Light", sans-serif;
+                font-weight: bold;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    border-color: #ffffff;
+                }
+
+                font-size: 1rem;
+                line-height: .9;
+                letter-spacing: .5px;
+                cursor: pointer;
+
+                border: 2px solid transparent;
+                border-radius: 25px;
+                transition: all .2s ease;
+
+                height: inherit;
+
+                @media (max-width: 800px) {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 2rem;
+
+                    height: auto;
+
+                    padding: 1rem 0;
+                    justify-content: center;
+
+                    border-radius: 0;
+                    border: none;
+                }
+            }
+        }
+
+        & .menu-burger {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border-radius:  50%;                    
+
+            width: 44px;
+            height: 30px;
+
+            position: relative;
+            z-index: 10;
+
+            cursor: pointer;
+
+            &.active {
+                &::before {
+                    top: 1px;
+                    transform: rotate(45deg);
+                }
+    
+                &::after {
+                    bottom: 5px;
+                    transform: rotate(-45deg);
+                }
+
+                .line {
+                    opacity: 0;
+                }
+            }
+
+            @media (max-width: 800px) {
+                display: flex;
+            }
+
+            &::before, &::after {
+                content: "";
+                display: block;
+
+                width: 30px;
+                height: 3px;
+
+                position: relative;
+
+                background-color: #ffffff;
+                transition: all .2s ease;
+            }
+
+            &::before {
+                top: 12px;
+            }
+
+            &::after {
+                bottom: 12px;
+            }
+
+            & .line {
+                width: 30px;
+                height: 3px;
+
+                background-color: #ffffff;
+                display: block;
+            }
+        }
+    }
+}
